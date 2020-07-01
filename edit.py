@@ -14,7 +14,7 @@ def segmentar(img,n_components):
 	segmented_pred = model.predict(img_ar)
 
 	# Reshape para as dimensões da imagem original
-	segmented = segmented_pred.reshape(img.shape[0],img.shape[1])
+	segmented = segmented_pred.reshape(img.shape[1],img.shape[0])
 
 	result = segmented.astype(np.uint8)
 
